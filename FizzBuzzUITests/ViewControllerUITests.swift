@@ -9,7 +9,9 @@
 import XCTest
 
 class ViewControllerUITests: XCTestCase {
-        
+    
+    let app = XCUIApplication()
+    
     override func setUp() {
         super.setUp()
         
@@ -29,7 +31,6 @@ class ViewControllerUITests: XCTestCase {
     }
     
     func testTapNumberButtonIncrementsScore() {
-        let app = XCUIApplication()
         let numberButton = app.buttons["numberButton"]
         
         numberButton.tap()
@@ -39,7 +40,6 @@ class ViewControllerUITests: XCTestCase {
     }
     
     func testTapNumberButtonTwiceIncrementsScoreTwice() {
-        let app = XCUIApplication()
         let numberButton = app.buttons["numberButton"]
         
         numberButton.tap()
@@ -48,5 +48,69 @@ class ViewControllerUITests: XCTestCase {
         let newScore = numberButton.label
         XCTAssertEqual(newScore, "2")
     }
+    
+    func testTapFizzButtonIncrementsToThree() {
+        let fizzButton = app.buttons["champagne"]
+        let numberButton = app.buttons["numberButton"]
+        
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        
+        XCTAssertEqual(numberButton.label, "3")
+    }
+    
+    func testTapBuzzButtonIncrementsToFive() {
+        let fizzButton = app.buttons["champagne"]
+        let buzzButton = app.buttons["lightning"]
+        let numberButton = app.buttons["numberButton"]
+        
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        buzzButton.tap()
+        
+        XCTAssertEqual(numberButton.label, "5")
+    }
+    
+    func testTapFizzBuzzIncrementsToFifteen() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let fizzbuzzButton = app.buttons["space"]
+        
+        playTo14()
+        
+        fizzbuzzButton.tap()
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "15")
+    }
+    
+    
+    // MARK: - Helpers
+    
+    func playTo14() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let fizzButton = app.buttons["champagne"]
+        let buzzButton = app.buttons["lightning"]
+        
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        buzzButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        buzzButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        numberButton.tap()
+    }
+    
+    
     
 }

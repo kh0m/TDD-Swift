@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var numberButton: UIButton!
+    @IBOutlet weak var fizzButton: UIButton!
+    @IBOutlet weak var buzzButton: UIButton!
+    @IBOutlet weak var fizzBuzzButton: UIButton!
     
     var game: Game?
     var gameScore: Int? {
@@ -34,7 +37,7 @@ class ViewController: UIViewController {
         gameScore = game.score
     }
 
-    func play(move: String) {
+    func play(move: Move) {
         guard let game = game else {
             print("game is nil!")
             return
@@ -44,13 +47,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
-        guard let gameScore = gameScore else {
-            print("gameScore is nil!")
+        switch sender {
+        case fizzButton:
+            play(move: .fizz)
+        case buzzButton:
+            play(move: .buzz)
+        case fizzBuzzButton:
+            play(move: .fizzBuzz)
+        case numberButton:
+            play(move: .number)
+        default:
             return
         }
-        
-        let nextScore = gameScore + 1
-        play(move: "\(nextScore)")
     }
 
 }

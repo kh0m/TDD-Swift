@@ -18,6 +18,7 @@
 		D4F8B4A71E8ADDE600307915 /* ViewControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F8B4A61E8ADDE600307915 /* ViewControllerUnitTests.swift */; };
 		D4F8B4A91E8AF46900307915 /* ViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F8B4A81E8AF46900307915 /* ViewControllerUITests.swift */; };
 		D4F8B4AB1E8B006A00307915 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F8B4AA1E8B006A00307915 /* GameTests.swift */; };
+		D4F8B4AD1E8BDFD600307915 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F8B4AC1E8BDFD600307915 /* Move.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D4F8B4A61E8ADDE600307915 /* ViewControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUnitTests.swift; sourceTree = "<group>"; };
 		D4F8B4A81E8AF46900307915 /* ViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUITests.swift; sourceTree = "<group>"; };
 		D4F8B4AA1E8B006A00307915 /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		D4F8B4AC1E8BDFD600307915 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				D4F8B47A1E89870E00307915 /* Info.plist */,
 				D4F8B49E1E89888E00307915 /* Brain.swift */,
 				D4F8B4A41E8998CD00307915 /* Game.swift */,
+				D4F8B4AC1E8BDFD600307915 /* Move.swift */,
 			);
 			path = FizzBuzz;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F8B4AD1E8BDFD600307915 /* Move.swift in Sources */,
 				D4F8B4711E89870E00307915 /* ViewController.swift in Sources */,
 				D4F8B49F1E89888E00307915 /* Brain.swift in Sources */,
 				D4F8B46F1E89870E00307915 /* AppDelegate.swift in Sources */,

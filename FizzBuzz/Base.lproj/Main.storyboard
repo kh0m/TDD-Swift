@@ -60,18 +60,27 @@
                                         <state key="normal" image="champagne" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yXy-zI-WrX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXM-Wf-Mln">
                                         <rect key="frame" x="0.0" y="136.5" width="126.5" height="126.5"/>
                                         <state key="normal" image="lightning" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ucg-VN-RUz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOG-yr-JTw">
                                         <rect key="frame" x="136.5" y="136.5" width="126.5" height="126.5"/>
                                         <state key="normal" image="space" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9UC-TW-2fE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -107,6 +116,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buzzButton" destination="SXM-Wf-Mln" id="Lz5-P9-ZCE"/>
+                        <outlet property="fizzButton" destination="NJc-Qd-Z71" id="7cK-kK-RPa"/>
+                        <outlet property="fizzBuzzButton" destination="IOG-yr-JTw" id="VjI-3o-Qc7"/>
                         <outlet property="numberButton" destination="mv2-Ow-XER" id="eDV-CE-qnF"/>
                     </connections>
                 </viewController>
